@@ -1,0 +1,100 @@
+.expandable-container {
+  height: auto;
+  max-height: 700px;
+  transition: height 1s;
+  margin: 5px 0;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.expandable-header {
+  cursor: pointer;
+  width: 100%;
+  padding: 10px 5px;
+  border: none;
+  position: relative;
+  background-color: #f2f2f2;
+  transition: background-color .2s;
+}
+
+.expandable-header:hover {
+  background-color: #e1e1e1;
+}
+
+.expandable-container.expanded .expandable-body {
+  height: 100%;
+  overflow-y: auto;
+  position: sticky;
+}
+
+.expandable-body {
+  background-color: #ffffff;
+  position: static;
+  display: flex;
+  flex-direction: column;
+  height: 0;
+  z-index: 2;
+}
+
+.expandable-item {
+  cursor: pointer;
+  background-color: #e0e0e0;;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 5px;
+  max-width: 100%;
+  margin: 10px 0 10px 20px;
+  max-height: 100px;
+  word-wrap: break-word;
+}
+
+.expandable-item:hover {
+  background-color: #ababab;
+}
+
+.expandable-data {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-right: 10px;
+}
+
+.expandable-stars {
+  display: flex;
+  align-items: center;
+}
+
+.arrow-down-icon {
+  position: absolute;
+  right: 10px;
+  transform: rotate(0);
+  transition: transform .5s;
+}
+
+.arrow-down-icon.expanded {
+  transform: rotate(180deg);
+}
+
+.reponame {
+  font-weight: 700;
+}
+
+.stars-count {
+  margin-right: 5px;
+}
+
+.stars-icon {
+  cursor: pointer;
+  transition: color 1s;
+}
+
+.stars-icon:hover {
+  color: yellow;
+  transition: color .5s;
+}
+
+@media (min-width: 992px) {
+  .expandable-container {
+    width: 960px;
+  }
+}

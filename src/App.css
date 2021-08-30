@@ -1,0 +1,68 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  margin: 0 10px 20px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.App-input {
+  border: 1px solid #cccccc;
+  background-color: #f2f2f2;
+  padding: 7px 5px 8px 10px;
+  margin: 0;
+  max-width: 100%;
+}
+
+.App-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 960px;
+  width: 100%;
+}
+
+.App-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.App-button {
+  background-color: #2D9CDB;
+  border: none;
+  padding: 10px 5px;
+  margin-top: 10px;
+  color: #ffffff;
+  cursor: pointer;
+  width: 100%;
+}
+
+.App-button:hover {
+    background-color: #2faaf1;
+}
+
+@media (min-width: 500px) {
+  .App-button {
+    width: 26rem;
+  }
+  .App-input {
+    width: 25rem;
+  }
+  .App-container {
+    width: auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .App-container {
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 0;
+  }
+  .App-header {
+    margin: 0 auto 20px;
+  }
+}
