@@ -42,3 +42,12 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## App overview
+
+Application is made of input along searchButton (that due to low complexity I decided to keep in App component itself instead of extracting it outside), and collection of Expandable components, that when clicked on got expanded and shows more information.
+
+Expandable components shows intially as button header with text of user login that matches username value given from input, and when expanded it shows repositories of specific user that includes name, description and number of stars fields.
+
+I decided also to keep thunk functions based on Redux thunk API in store file, as I don't need these functions in other places.
+

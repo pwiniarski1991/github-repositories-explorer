@@ -28,11 +28,11 @@ const BaseExpandable: FC<Props> = ({ user }) => {
   const openClassName = isOpen && list ? 'expanded' : '';
   return (
     <div className={`expandable-container ${openClassName}`}>
-      <button className="expandable-header" onClick={onClick}>
+      <button aria-controls="content" className="expandable-header" onClick={onClick} aria-expanded={isOpen}>
         {user.login}
         <FontAwesomeIcon className={isOpen && list ? 'arrow-down-icon expanded' : 'arrow-down-icon'} icon={faChevronDown} />
       </button>
-      <div className="expandable-body">
+      <div id="content" className="expandable-body">
         {list.data[user.id] ? list.data[user.id].map((repo: Repo) => (
           <div key={repo.id} className="expandable-item">
             <div className="expandable-data">
